@@ -3,28 +3,71 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link href="./main.css" rel="stylesheet">
 	<script src="./main.js" defer></script>
 	<title>ToDo List | TOP</title>
 </head>
 	<body>
 		<header class="header-container">
-			<div class="logo-webname">
-				<img src="/src/assets/Clound.png" alt="logo" class="logo">
-				<h1 class="webname">Rutinitas</h1>
+			<div class="user-container">
+				<!-- <img src="" alt="user profile image" class="user-profile-image"> -->
+					<svg height="50" width="50">
+						<circle cx="25" cy="25" r="20" stroke="black" stroke-width="3" fill="white" />
+					</svg>
+				<div class="user-wrapper">
+					<h1 class="user-name">User Name</h1>
+					<p class="user-email">user_email@gmail.com</p>
+				</div>
 			</div>
-			<div class="search-container">
-				<img src="/src/assets/Search.png" class="icon" alt="Search icon">
-				<input type="text" class="search" placeholder="Search">
+
+			<div class="menu-container">
+				<nav class="menu">
+					<h1 class="menu-title">MENU</h1>
+					<ul class="menu-list">
+						<li class="menu-item">
+							<span class="material-symbols-outlined">home</span>
+							<a href="#" class="menu-link">Home</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link">Inbox</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link">Insights</a>
+						</li>
+						<li class="menu-item">
+							<a href="#" class="menu-link">Settings</a>
+					</ul>
+				</nav>
 			</div>
 		</header>
 
 		<main class="main-container">
-
+			<div class="todo-container">
+				<h1 class="todo-title">To Do List</h1>
+				<div class="todo-list">
+					<div class="todo-item">
+						<input type="checkbox" class="todo-checkbox">
+						<p class="todo-text">Task 1</p>
+					</div>
+					<div class="todo-item">
+						<input type="checkbox" class="todo-checkbox">
+						<p class="todo-text">Task 2</p>
+					</div>
+					<div class="todo-item">
+						<input type="checkbox" class="todo-checkbox">
+						<p class="todo-text">Task 3</p>
+					</div>
+					<div class="todo-item">
+						<input type="checkbox" class="todo-checkbox">
+						<p class="todo-text">Task 4</p>
+					</div>
+				</div>
+			</div>
 		</main>
 
-		<div class="user-container">
 
-		</div>
+
 	</body>
 </html>
