@@ -21,3 +21,27 @@
   margin: 0;
   padding: 0;
 }
+
+#header-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: var(--light-color);
+
+  #header-navigation {
+
+    #header-logo {
+
+      .header-nav-logo {
+        width: 4vw;
+      }
+
+      .webname {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
