@@ -1,4 +1,5 @@
-$background-color: #e3e3e3;
+$background-color: #f0f0f0;
+$primary-font: 'Open Sans', sans-serif;
 
 
 .material-symbols-outlined {
@@ -7,7 +8,7 @@ $background-color: #e3e3e3;
   'wght' 400,
   'GRAD' 0,
   'opsz' 24;
-  font-size: 12px;
+  font-size: 24px;
 }
 
 * {
@@ -32,11 +33,15 @@ $background-color: #e3e3e3;
 body {
   @include flex(row, center, center);
   width: 100%;
+  height: 100vh;
+  font-family: $primary-font;
 
 
   .header-container {
-    width: 20vw;
-    padding-left: 2rem;
+    background-color: $background-color;
+    width: 18vw;
+    height: 100%;
+    padding: 1rem 1rem;
 
     .user-container {
       @include flex(row, null, center);
@@ -59,11 +64,13 @@ body {
 
     .menu-container {
       @include flex(row, null, center);
+      margin-top: 2rem;
       
       .menu-title {
         font-weight: bold;
         font-size: 1rem;
-        margin-right: 1rem;
+        margin-left: .5rem;
+
       }
       .menu-list {
         @include flex(column, center, none);
@@ -71,12 +78,15 @@ body {
         padding-left: 2rem;
 
         .menu-item {
-          @include flex(row, center, center);
+          @include flex(row, start, center);
+          gap: 0.8rem;
           cursor: pointer;
+          margin: 0.5rem 0;
+          
         
           .menu-link {
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #000;
             font-weight: bold;
           
