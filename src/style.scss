@@ -31,16 +31,16 @@ $primary-font: 'Open Sans', sans-serif;
 }
 
 body {
-  @include flex(row, center, center);
+  @include flex(row, none, center);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: $primary-font;
 
 
   .header-container {
     background-color: $background-color;
     width: 18vw;
-    height: 100%;
+    height: 100vh;
     padding: 1rem 1rem;
 
     .user-container {
@@ -98,6 +98,8 @@ body {
 
   .main-container {
     flex: 1;
+    padding: 2rem 2rem;
+    height: 100vh;
   }
 
 }

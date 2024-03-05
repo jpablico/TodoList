@@ -15,16 +15,16 @@
 body {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: none;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: "Open Sans", sans-serif;
 }
 body .header-container {
   background-color: #f0f0f0;
   width: 18vw;
-  height: 100%;
+  height: 100vh;
   padding: 1rem 1rem;
 }
 body .header-container .user-container {
@@ -83,4 +83,6 @@ body .header-container .menu-container .menu-list .menu-item .menu-link {
 }
 body .main-container {
   flex: 1;
+  padding: 2rem 2rem;
+  height: 100vh;
 }
