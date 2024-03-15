@@ -1,4 +1,5 @@
 $background-color: #f0f0f0;
+$accent-color: #0074FF;
 $primary-font: 'Roboto', sans-serif;
 
 
@@ -8,7 +9,8 @@ $primary-font: 'Roboto', sans-serif;
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
-  'opsz' 24;
+  'opsz' 24,
+  'COLR' $accent-color;
   font-size: 24px;
 }
 
@@ -19,6 +21,11 @@ $primary-font: 'Roboto', sans-serif;
   'GRAD' 0,
   'opsz' 24;
   font-size: 24px;
+}
+
+.material-icons-outlined {
+  color: $accent-color;
+  font-size: 25px;
 }
 
 .roboto-thin {
@@ -112,4 +119,107 @@ $primary-font: 'Roboto', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: $primary-font;
+}
+
+body {
+  @include flex(row, flex-start, start);
+  background-color: $background-color;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 100vw;
+}
+
+.header-container {
+  @include flex(column, space-between, start);
+  background-color: $background-color;
+  padding: 20px;
+  width: 20vw;
+
+  .logo-title-wrapper {
+    @include flex(row, flex-start, center);
+    gap: 10px;
+
+    .logoHeader {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+.search-container {
+  @include flex(row, flex-start, center);
+  background-color: #e2e2e2;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 20px;
+
+
+  .search-input {
+    width: 90%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #e2e2e2;
+  }
+}
+
+  .nav-container {
+    @include flex(column, space-between, start);
+    width: 100%;
+    padding: 20px 0;
+
+    .nav-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #979797;
+      margin: 10px 0;
+    }
+
+    .nav-list {
+      @include flex(column, space-between, start);
+      width: 100%;
+      gap: 16px;
+
+      .nav-item {
+        @include flex(row, space-between, center);
+        width: 100%;
+        flex: 1;
+        gap: 5px;
+
+        .nav-link {
+          @include flex(row, flex-start, center);
+          gap: 5px;
+          text-decoration: none;
+          color: #333;
+          font-size: 18px;
+          font-weight: 500;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #f00;
+          }
+        }
+
+        .task-amount {
+          background-color: #d7d7d7;
+          font-size: 18px;
+          font-weight: 400;
+          color: #6a6a6a;
+          padding: 4px 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.main-container {
+  background-color: rgb(255, 255, 255);
+  flex: 1;
+  width: 100%;
+  height: 100vh;
 }
