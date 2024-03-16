@@ -201,6 +201,11 @@ body {
   padding: 4px 10px;
   border-radius: 10px;
 }
+.header-container .nav-container hr {
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+}
 
 .main-container {
   background-color: rgb(255, 255, 255);
