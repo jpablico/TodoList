@@ -191,7 +191,7 @@ body {
   transition: color 0.3s ease;
 }
 .header-container .nav-container .nav-list .nav-item .nav-link:hover {
-  color: #f00;
+  color: #0074FF;
 }
 .header-container .nav-container .nav-list .nav-item .task-amount {
   background-color: #d7d7d7;
