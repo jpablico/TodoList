@@ -256,6 +256,9 @@ hr {
     }
 
     .task-button-wrapper {
+      :hover {
+        cursor: pointer;
+      }
       
       .add-task-button {
         @include flex(row, center, center);

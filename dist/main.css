@@ -236,6 +236,9 @@ hr {
   font-size: 16px;
   color: #979797;
 }
+.main-container .page-heading-wrapper .task-button-wrapper :hover {
+  cursor: pointer;
+}
 .main-container .page-heading-wrapper .task-button-wrapper .add-task-button {
   display: flex;
   flex-direction: row;
