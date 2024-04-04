@@ -256,6 +256,29 @@ hr {
 #dialog-modal {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 80px;
   top: 50%;
-  left: 45%;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #d9eaff;
+  gap: 5px;
+}
+#dialog-modal .input {
+  border: none;
+  width: 100%;
+  background: none;
+}
+#dialog-modal .input:focus {
+  outline: none;
+}
+#dialog-modal .input-task {
+  font-size: 24px;
+}
+#dialog-modal .input-description {
+  font-size: 12px;
 }
