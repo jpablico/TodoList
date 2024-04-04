@@ -253,3 +253,9 @@ hr {
 .main-container .page-heading-wrapper .task-button-wrapper .add-task-button :hover {
   cursor: pointer;
 }
+#dialog-modal {
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 45%;
+}
