@@ -142,7 +142,7 @@ body {
   @include flex(column, space-between, start);
   background-color: $background-color;
   padding: 20px;
-  width: 20vw;
+  width: 18vw;
 
   .logo-title-wrapper {
     @include flex(row, flex-start, center);
@@ -180,7 +180,7 @@ body {
     padding: 20px 0;
 
     .nav-title {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 500;
       color: #979797;
       margin: 10px 0;
@@ -199,11 +199,11 @@ body {
 
         .nav-link {
           @include flex(row, flex-start, center);
-          gap: 5px;
+          gap: 10px;
           text-decoration: none;
           color: #333;
-          font-size: 18px;
-          font-weight: 500;
+          font-size: 16px;
+          font-weight: 400;
           transition: color 0.3s ease;
 
           &:hover {
@@ -212,10 +212,10 @@ body {
         }
 
         .task-amount {
-          background-color: #d7d7d7;
-          font-size: 18px;
+          background-color: #dfdfdf;
+          font-size: 14px;
           font-weight: 400;
-          color: #6a6a6a;
+          color: #575757;;
           padding: 4px 10px;
           border-radius: 10px;
         }
@@ -224,7 +224,7 @@ body {
   }
 }
 
-hr {
+.hr-break {
   margin-top: 20px;;
   width: 100%;
   border: 1px solid #d7d7d7;
@@ -280,8 +280,51 @@ hr {
   }
 }
 
+.side-wrapper {
+  padding: 20px;
+
+  .user-account {
+    @include flex(row, space-between, center);
+    width: 20vw;
+    gap: 5px;
+
+    .user-container {
+      @include flex(row, center, center);
+
+      .user-profile {
+        width: 40px;
+        border-radius: 50px
+      }
+        .user-account-info {
+          padding-left: 8px;
+          gap: 1px;
+    
+          .user-name {
+            font-size: 14px;
+            font-weight: 500;
+          }
+    
+          .user-email {
+            font-size: 12px;
+            font-weight: 400;
+            color: #979797;
+          }
+      }
+    }
+
+    .user-notifications-settings-container {
+      @include flex(row, center, center);
+      gap: 10px;
+    }
+  }
+}
+
+
+
+
 #dialog-modal {
-  @include flex(column, center, center);
+  display: none;
+  //@include flex(column, center, center);
   width: 400px;
   height: 80px;
   top: 50%;
@@ -301,11 +344,21 @@ hr {
       outline: none;
     }
 
-.input-task {
-  font-size: 24px;
-}
-.input-description {
-  font-size: 12px;
-}
+  .dialog-hr {
+    width: 100%;
+    border: 1px solid #d7d7d7;
+  }
+
+  .task-buttons-wrapper {
+    @include flex(row, center, space-between);
+  }
+
+  //Input css
+  .input-task {
+    font-size: 24px;
+  }
+  .input-description {
+    font-size: 12px;
+  }
 
 }

@@ -114,7 +114,7 @@ body {
   align-items: start;
   background-color: #f0f0f0;
   padding: 20px;
-  width: 20vw;
+  width: 18vw;
 }
 .header-container .logo-title-wrapper {
   display: flex;
@@ -156,7 +156,7 @@ body {
   padding: 20px 0;
 }
 .header-container .nav-container .nav-title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: #979797;
   margin: 10px 0;
@@ -183,26 +183,26 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   text-decoration: none;
   color: #333;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   transition: color 0.3s ease;
 }
 .header-container .nav-container .nav-list .nav-item .nav-link:hover {
   color: #0074FF;
 }
 .header-container .nav-container .nav-list .nav-item .task-amount {
-  background-color: #d7d7d7;
-  font-size: 18px;
+  background-color: #dfdfdf;
+  font-size: 14px;
   font-weight: 400;
-  color: #6a6a6a;
+  color: #575757;
   padding: 4px 10px;
   border-radius: 10px;
 }
 
-hr {
+.hr-break {
   margin-top: 20px;
   width: 100%;
   border: 1px solid #d7d7d7;
@@ -253,11 +253,50 @@ hr {
 .main-container .page-heading-wrapper .task-button-wrapper .add-task-button :hover {
   cursor: pointer;
 }
-#dialog-modal {
+.side-wrapper {
+  padding: 20px;
+}
+.side-wrapper .user-account {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 20vw;
+  gap: 5px;
+}
+.side-wrapper .user-account .user-container {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.side-wrapper .user-account .user-container .user-profile {
+  width: 40px;
+  border-radius: 50px;
+}
+.side-wrapper .user-account .user-container .user-account-info {
+  padding-left: 8px;
+  gap: 1px;
+}
+.side-wrapper .user-account .user-container .user-account-info .user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.side-wrapper .user-account .user-container .user-account-info .user-email {
+  font-size: 12px;
+  font-weight: 400;
+  color: #979797;
+}
+.side-wrapper .user-account .user-notifications-settings-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#dialog-modal {
+  display: none;
   width: 400px;
   height: 80px;
   top: 50%;
@@ -275,6 +314,16 @@ hr {
 }
 #dialog-modal .input:focus {
   outline: none;
+}
+#dialog-modal .dialog-hr {
+  width: 100%;
+  border: 1px solid #d7d7d7;
+}
+#dialog-modal .task-buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
 }
 #dialog-modal .input-task {
   font-size: 24px;

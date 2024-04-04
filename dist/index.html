@@ -61,7 +61,7 @@
 						</li>
 					</ul>
 			</nav>
-					<hr>
+					<hr class="hr-break">
 			<nav class="nav-container">
 				<h1 class="nav-title">Your own tags</h1>
 				<ul class="nav-list">
@@ -97,9 +97,31 @@
 				
 			</div>
 		</main>
+
+		<div class="side-wrapper">
+			<div class="user-account">
+				<div class="user-container">
+					<img src="/src/assets/portraitJoshP.jpeg" class="user-profile" alt="profile image">
+					<div class="user-account-info">
+						<h1 class="user-name">Josh Pablico</h1>
+						<h2 class="user-email">jbpablico27@gmail.com</h2>
+					</div>
+				</div>
+				<div class="user-notifications-settings-container">
+					<span class="material-icons-outlined">notifications</span>
+					<span class="material-icons-outlined">settings</span>
+				</div>
+			</div>
+		</div>
 	</body>
-	<dialog id="dialog-modal" open>
+	<dialog id="dialog-modal">
 		<input type="text" class="input input-task" id="task-name" name="task-name" placeholder="Task name">
+		<hr class="dialog-hr">
 		<input type="text" class="input input-description" id="task-description" name="task-description" placeholder="Description">
+		<div class="task-buttons-wrapper">
+
+			<input type="date">
+
+		</div>
 	</dialog>
 </html>
