@@ -276,7 +276,16 @@ body {
   }
 
   .main-body {
-    
+    height: 100%;
+
+    .tasks-container {
+      background-color: rgb(224, 224, 224);
+      width: 100%;
+      
+      .task {
+        @include flex(row, center, center)
+      }
+    }
   }
 }
 
@@ -373,12 +382,9 @@ body {
   }
 }
 
-
-
-
 #dialog-modal {
- // display: none;
-  @include flex(column, center, center);
+  display: none;
+  //@include flex(column, center, center);
   width: 400px;
   height: 80px;
   top: 50%;
