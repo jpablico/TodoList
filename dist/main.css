@@ -307,7 +307,7 @@ body {
   width: 100%;
 }
 .side-wrapper .side-calendar-container #calendar .calendar-heading {
-  color: #0074FF;
+  font-size: 20px;
 }
 .side-wrapper .side-calendar-container #calendar table {
   width: 100%;
@@ -330,14 +330,18 @@ body {
 }
 .side-wrapper .side-calendar-container #calendar table tbody tr .day {
   width: 36px;
-  height: 37px;
+  height: 40px;
 }
 .side-wrapper .completed-task-container .completed-task-title {
   font-weight: 500;
+  font-size: 20px;
 }
 
 #dialog-modal {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 400px;
   height: 80px;
   top: 50%;

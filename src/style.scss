@@ -328,7 +328,7 @@ body {
       width: 100%;
       
       .calendar-heading {
-        color: $accent-color;
+        font-size: 20px;
       }
 
       table {
@@ -357,7 +357,7 @@ body {
 
             .day {
               width: 36px;
-              height: 37px;
+              height: 40px;
             }
           }
         }
@@ -368,6 +368,7 @@ body {
 
     .completed-task-title {
       font-weight: 500;
+      font-size: 20px;
     }
   }
 }
@@ -376,8 +377,8 @@ body {
 
 
 #dialog-modal {
-  display: none;
-  //@include flex(column, center, center);
+ // display: none;
+  @include flex(column, center, center);
   width: 400px;
   height: 80px;
   top: 50%;
