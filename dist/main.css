@@ -332,6 +332,9 @@ body {
   width: 36px;
   height: 37px;
 }
+.side-wrapper .completed-task-container .completed-task-title {
+  font-weight: 500;
+}
 
 #dialog-modal {
   display: none;
