@@ -283,7 +283,19 @@ body {
       width: 100%;
       
       .task {
-        @include flex(row, center, center)
+        @include flex(row, start, center);
+        padding: 0px 30px;
+
+        #task-completion {
+          background-color: blue;
+        }
+
+        .task-body {
+
+          .lower-task-body {
+            @include flex(row, start, center);
+          }
+        }
       }
     }
   }
