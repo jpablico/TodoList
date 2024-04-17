@@ -257,24 +257,42 @@ body {
   height: 100%;
 }
 .main-container .main-body .tasks-container {
-  background-color: rgb(224, 224, 224);
   width: 100%;
 }
 .main-container .main-body .tasks-container .task {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   padding: 0px 30px;
 }
 .main-container .main-body .tasks-container .task #task-completion {
   background-color: blue;
 }
+.main-container .main-body .tasks-container .task .task-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+}
+.main-container .main-body .tasks-container .task .task-body .task-title {
+  font-size: 14px;
+  font-weight: 500;
+}
 .main-container .main-body .tasks-container .task .task-body .lower-task-body {
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  gap: 2px;
+}
+.main-container .main-body .tasks-container .task .task-body .lower-task-body .task-tag, .main-container .main-body .tasks-container .task .task-body .lower-task-body .task-time {
+  color: #5d5c5c;
+}
+.main-container .main-body .tasks-container .task .task-body .lower-task-body .task-due {
+  color: #0074FF;
 }
 
 .side-wrapper {

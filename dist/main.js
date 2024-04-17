@@ -20,13 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/scripts/calendar.js":
+/*!*********************************!*\
+  !*** ./src/scripts/calendar.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createCalendar: () => (/* binding */ createCalendar)\n/* harmony export */ });\nfunction createCalendar() {\n\tconst date = new Date();\n\tconst today = date.getDate();\n\tconst month = date.getMonth();\n\tconst year = date.getFullYear();\n\tconst daysInMonth = new Date(year, month + 1, 0).getDate();\n\tconst firstDay = new Date(year, month, 1).getDay();\n  \n\tconst monthNames = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\",\n\t\"July\", \"August\", \"September\", \"October\", \"November\", \"December\"\n\t];\n  \n\tlet calendarHTML = `<h2 class=\"calendar-heading\">${monthNames[month]} ${year}</h2><table><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>`;\n  \n\tfor (let i = 0; i < firstDay; i++) {\n\t  calendarHTML += '<td class=\"day\"></td>';\n\t}\n  \n\tfor (let i = 1; i <= daysInMonth; i++) {\n\t  if (i === today) {\n\t\tcalendarHTML += `<td class=\"day today\">${i}</td>`;\n\t  } else if ((i + firstDay) % 7 === 0) {\n\t\tcalendarHTML += `<td class=\"day\">${i}</td></tr><tr>`;\n\t  } else {\n\t\tcalendarHTML += `<td class=\"day\">${i}</td>`;\n\t  }\n\t}\n  \n\tcalendarHTML += '</tr></table>';\n  \n\tdocument.getElementById('calendar').innerHTML = calendarHTML;\n  }\n  \n  \n\n//# sourceURL=webpack://todolist/./src/scripts/calendar.js?");
+
+/***/ }),
+
 /***/ "./src/scripts/index.js":
 /*!******************************!*\
   !*** ./src/scripts/index.js ***!
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/style.scss */ \"./src/style.scss\");\n\n\nconst taskbutton = document.getElementsByClassName('task-button-wrapper')[0];\n\ntaskbutton.addEventListener('click', createTask);\n\nfunction createTask() {\n\tconsole.log(\"Bop\");\n}\n\n\nfunction createCalendar() {\n\tconst date = new Date();\n\tconst today = date.getDate();\n\tconst month = date.getMonth();\n\tconst year = date.getFullYear();\n\tconst daysInMonth = new Date(year, month + 1, 0).getDate();\n\tconst firstDay = new Date(year, month, 1).getDay();\n  \n\tconst monthNames = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\",\n\t\"July\", \"August\", \"September\", \"October\", \"November\", \"December\"\n\t];\n  \n\tlet calendarHTML = `<h2 class=\"calendar-heading\">${monthNames[month]} ${year}</h2><table><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>`;\n  \n\tfor (let i = 0; i < firstDay; i++) {\n\t  calendarHTML += '<td class=\"day\"></td>';\n\t}\n  \n\tfor (let i = 1; i <= daysInMonth; i++) {\n\t  if (i === today) {\n\t\tcalendarHTML += `<td class=\"day today\">${i}</td>`;\n\t  } else if ((i + firstDay) % 7 === 0) {\n\t\tcalendarHTML += `<td class=\"day\">${i}</td></tr><tr>`;\n\t  } else {\n\t\tcalendarHTML += `<td class=\"day\">${i}</td>`;\n\t  }\n\t}\n  \n\tcalendarHTML += '</tr></table>';\n  \n\tdocument.getElementById('calendar').innerHTML = calendarHTML;\n  }\n  \n  createCalendar();\n\n//# sourceURL=webpack://todolist/./src/scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/style.scss */ \"./src/style.scss\");\n/* harmony import */ var _calendar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./calendar.js */ \"./src/scripts/calendar.js\");\n\n\n\nconst taskbutton = document.getElementsByClassName('task-button-wrapper')[0];\n\ntaskbutton.addEventListener('click', createTask);\n\nfunction createTask() {\n\tconsole.log(\"Bop\");\n}\n\n  (0,_calendar_js__WEBPACK_IMPORTED_MODULE_1__.createCalendar)();\n\n//# sourceURL=webpack://todolist/./src/scripts/index.js?");
 
 /***/ })
 
@@ -57,6 +67,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
