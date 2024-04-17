@@ -36,7 +36,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/style.scss */ \"./src/style.scss\");\n/* harmony import */ var _calendar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./calendar.js */ \"./src/scripts/calendar.js\");\n\n\n\nconst taskbutton = document.getElementsByClassName('task-button-wrapper')[0];\n\ntaskbutton.addEventListener('click', createTask);\n\nfunction createTask() {\n\tconsole.log(\"Bop\");\n}\n\n  (0,_calendar_js__WEBPACK_IMPORTED_MODULE_1__.createCalendar)();\n\n//# sourceURL=webpack://todolist/./src/scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/style.scss */ \"./src/style.scss\");\n/* harmony import */ var _calendar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./calendar.js */ \"./src/scripts/calendar.js\");\n/* harmony import */ var _tasks_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tasks.js */ \"./src/scripts/tasks.js\");\n\n\n\n\n\n\nconst taskbutton = document.getElementsByClassName('task-button-wrapper')[0];\n\ntaskbutton.addEventListener('click', createTask);\n\nfunction createTask() {\n\tconsole.log(\"Bop\");\n}\n\n  (0,_calendar_js__WEBPACK_IMPORTED_MODULE_1__.createCalendar)();\n\n//# sourceURL=webpack://todolist/./src/scripts/index.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/tasks.js":
+/*!******************************!*\
+  !*** ./src/scripts/tasks.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Task: () => (/* binding */ Task),\n/* harmony export */   TaskList: () => (/* binding */ TaskList)\n/* harmony export */ });\nclass Task {\n\tconstructor(name, description) {\n\t  this.name = name;\n\t  this.description = description;\n\t  this.completed = false;\n\t}\n\n\tcomplete() {\n\t  this.completed = true;\n\t}\n  }\n  \n  class TaskList {\n\tconstructor() {\n\t  this.tasks = [];\n\t}\n  \n\taddTask(name, description) {\n\t  const newTask = new Task(name, description);\n\t  this.tasks.push(newTask);\n\t}\n  \n\tgetTasks() {\n\t  return this.tasks;\n\t}\n  }\n  \n  // Usage\n  const taskList = new TaskList();\n  taskList.addTask('Task 1', 'Description for Task 1');\n  taskList.addTask('Task 2', 'Description for Task 2');\n  \n  console.log(taskList.getTasks());\n\n\n\n//# sourceURL=webpack://todolist/./src/scripts/tasks.js?");
 
 /***/ })
 
