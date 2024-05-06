@@ -65,7 +65,12 @@
 			</nav>
 					<hr class="hr-break">
 			<nav class="nav-container">
-				<h1 class="nav-title">Your own tags</h1>
+				<div class="nav-title-createButton">
+					<h1 class="nav-title">Your own tags</h1>
+					<button class="create-tag-button">
+						<span class="material-icons-outlined">add</span>
+				</div>
+				
 				<ul class="nav-list">
 					<li class="nav-item">
 						<a href="#" class="nav-link"><span class="material-icons-outlined">star</span>Starred</a>
@@ -198,14 +203,15 @@
 			</section>
 		</div>
 	</body>
-	<dialog id="dialog-modal">
-		<input type="text" class="input input-task" id="task-name" name="task-name" placeholder="Task name">
-		<hr class="dialog-hr">
-		<input type="text" class="input input-description" id="task-description" name="task-description" placeholder="Description">
-		<div class="task-buttons-wrapper">
-
-			<input type="date">
-
-		</div>
-	</dialog>
+	<div class="task-dialog">
+		<dialog id="dialog-modal">
+			<input type="text" class="input input-task" id="task-name" name="task-name" placeholder="Task name">
+			<hr class="dialog-hr">
+			<input type="text" class="input input-description" id="task-description" name="task-description" placeholder="Description">
+			<div class="task-buttons-wrapper">
+				<input type="date">
+			</div>
+		</dialog>
+	</div>
+	
 </html>
