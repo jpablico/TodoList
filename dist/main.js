@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/style.scss */ \"./src/style.scss\");\n/* harmony import */ var _calendar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./calendar.js */ \"./src/scripts/calendar.js\");\n/* harmony import */ var _tasks_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tasks.js */ \"./src/scripts/tasks.js\");\n\n\n\n\n\n\nconst taskbutton = document.getElementsByClassName('task-button-wrapper')[0];\n\ntaskbutton.addEventListener('click', createTask);\n\nfunction createTask() {\n\tconsole.log(\"Bop\");\n}\n\n(0,_calendar_js__WEBPACK_IMPORTED_MODULE_1__.createCalendar)();\n\n\n\n//# sourceURL=webpack://todolist/./src/scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/style.scss */ \"./src/style.scss\");\n/* harmony import */ var _calendar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./calendar.js */ \"./src/scripts/calendar.js\");\n/* harmony import */ var _tasks_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tasks.js */ \"./src/scripts/tasks.js\");\n\n\n\n\n\n\nconst taskbutton = document.getElementsByClassName('task-button-wrapper')[0];\n\ntaskbutton.addEventListener('click', createTask);\n\nfunction createTask() {\n\tconsole.log(\"Bop\");\n}\n\n\n\n\n\n//# sourceURL=webpack://todolist/./src/scripts/index.js?");
 
 /***/ }),
 

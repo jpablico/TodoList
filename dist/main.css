@@ -116,6 +116,29 @@ body {
   padding: 20px;
   width: 18vw;
 }
+.header-container .user-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header-container .user-container .user-profile {
+  width: 40px;
+  border-radius: 50px;
+}
+.header-container .user-container .user-account-info {
+  padding-left: 8px;
+  gap: 1px;
+}
+.header-container .user-container .user-account-info .user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.header-container .user-container .user-account-info .user-email {
+  font-size: 12px;
+  font-weight: 400;
+  color: #979797;
+}
 .header-container .logo-title-wrapper {
   display: flex;
   flex-direction: row;
@@ -458,7 +481,7 @@ body {
 }
 
 .task-dialog {
-  display: flex;
+  display: none;
 }
 .task-dialog #dialog-modal {
   display: none;

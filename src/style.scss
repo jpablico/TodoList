@@ -144,6 +144,30 @@ body {
   padding: 20px;
   width: 18vw;
 
+  .user-container {
+    @include flex(row, center, center);
+
+    .user-profile {
+      width: 40px;
+      border-radius: 50px
+    }
+      .user-account-info {
+        padding-left: 8px;
+        gap: 1px;
+  
+        .user-name {
+          font-size: 14px;
+          font-weight: 500;
+        }
+  
+        .user-email {
+          font-size: 12px;
+          font-weight: 400;
+          color: #979797;
+        }
+    }
+  }
+
   .logo-title-wrapper {
     @include flex(row, flex-start, center);
     gap: 10px;
@@ -498,7 +522,7 @@ body {
 
 // Dialog Modals
 .task-dialog {
-  display: flex;
+  display: none;
 
   #dialog-modal {
     display: none;
