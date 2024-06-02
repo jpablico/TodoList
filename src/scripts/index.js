@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '/src/style.scss';
 import { createCalendar } from './calendar.js';
 import { Task } from './tasks.js';
@@ -14,3 +15,6 @@ function createTask() {
 
 
 
+=======
+import '/src/style.scss';
+>>>>>>> c1db37e65f0565aefb9113286afaa8da0b0ccf8e
