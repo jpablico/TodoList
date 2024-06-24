@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.10.0",
+    "ignore-emit-webpack-plugin": "^2.0.6",
     "mini-css-extract-plugin": "^2.8.1",
     "sass": "^1.70.0",
     "sass-loader": "^14.1.0",
