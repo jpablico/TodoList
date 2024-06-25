@@ -46,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Sty
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   navItems: () => (/* binding */ navItems)\n/* harmony export */ });\nconst navItems = ['All', 'Completed', 'Temporary', 'Permanent'];\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/navData.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   navItems: () => (/* binding */ navItems),\n/* harmony export */   navList: () => (/* binding */ navList)\n/* harmony export */ });\nconst navItems = ['All', 'Completed', 'Temporary', 'Permanent'];\nconst navList = document.querySelector('.nav-list');\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/navData.js?");
 
 /***/ }),
 
@@ -56,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   populateNavList: () => (/* binding */ populateNavList)\n/* harmony export */ });\nfunction populateNavList(navList, navItems) {\n    navList.innerHTML = ''; // Clear existing items\n    navItems.forEach(item => {\n        const li = document.createElement('li');\n        li.className = 'nav-item';\n        li.textContent = item;\n        navList.appendChild(li);\n    });\n}\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/navUtils.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   populateNavList: () => (/* binding */ populateNavList)\n/* harmony export */ });\nfunction populateNavList(navList, navItems) {\n    navList.innerHTML = ''; \n    navItems.forEach(item => {\n        const li = document.createElement('li');\n        li.className = 'nav-item';\n        li.textContent = item;\n        li.addEventListener('click', function(event) {\n            document.querySelectorAll('.nav-item').forEach(navItem => {\n                navItem.classList.remove('active');\n            });\n            event.target.classList.add('active');\n        });\n        navList.appendChild(li);\n    });\n}\n\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/navUtils.js?");
 
 /***/ })
 
