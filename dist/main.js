@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createHeader: () => (/* binding */ createHeader)\n/* harmony export */ });\n/* harmony import */ var _Styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Styles/style.scss */ \"./src/Styles/style.scss\");\n\n\nfunction createHeader() {\n  const header = document.createElement('header');\n  header.id = 'header-container';\n  header.innerHTML = `\n\t<div class='header-wrapper'>\n\t\t<h1 class='header-title'>Daybreak</h1>\n\t\t<button class='header-button'>Add task</button>\n\t</div>\n\t<nav class='nav-container'>\n\t\t<ul class='nav-list'>\n\t\t\t<li class='nav-item'>All</li>\n\t\t\t<li class='nav-item'>Completed</li>\n\t\t\t<li class='nav-item'>Temporary</li>\n\t\t</ul>\n\t\t<button class='nav-button'>Create a Label</button>\n\t</nav>\n  `;\n  return header;\n}\n\n \n\n//# sourceURL=webpack://todolist/./src/Scripts/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createHeader: () => (/* binding */ createHeader)\n/* harmony export */ });\n/* harmony import */ var _Styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Styles/style.scss */ \"./src/Styles/style.scss\");\n/* harmony import */ var _navData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navData.js */ \"./src/Scripts/navData.js\");\n/* harmony import */ var _navUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navUtils.js */ \"./src/Scripts/navUtils.js\");\n\n\n\n\nfunction createHeader() {\n    const header = document.createElement('header');\n    header.id = 'header-container';\n    header.innerHTML = `\n        <div class='header-wrapper'>\n            <h1 class='header-title'>Daybreak</h1>\n            <button class='header-button'>Add task</button>\n        </div>\n        <nav class='nav-container'>\n            <ul class='nav-list'></ul>\n            <button class='nav-button'><span class='material-symbols-outlined span-icon'>add</span></button>\n        </nav>\n    `;\n\n    const navList = header.querySelector('.nav-list');\n    (0,_navUtils_js__WEBPACK_IMPORTED_MODULE_2__.populateNavList)(navList, _navData_js__WEBPACK_IMPORTED_MODULE_1__.navItems);\n\n    return header;\n}\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/header.js?");
 
 /***/ }),
 
@@ -37,6 +37,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Styles/style.scss */ \"./src/Styles/style.scss\");\n/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.js */ \"./src/Scripts/header.js\");\n\n\n\nconst body = document.body;\n\nbody.appendChild((0,_header_js__WEBPACK_IMPORTED_MODULE_1__.createHeader)());\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/index.js?");
+
+/***/ }),
+
+/***/ "./src/Scripts/navData.js":
+/*!********************************!*\
+  !*** ./src/Scripts/navData.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   navItems: () => (/* binding */ navItems)\n/* harmony export */ });\nconst navItems = ['All', 'Completed', 'Temporary', 'Permanent'];\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/navData.js?");
+
+/***/ }),
+
+/***/ "./src/Scripts/navUtils.js":
+/*!*********************************!*\
+  !*** ./src/Scripts/navUtils.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   populateNavList: () => (/* binding */ populateNavList)\n/* harmony export */ });\nfunction populateNavList(navList, navItems) {\n    navList.innerHTML = ''; // Clear existing items\n    navItems.forEach(item => {\n        const li = document.createElement('li');\n        li.className = 'nav-item';\n        li.textContent = item;\n        navList.appendChild(li);\n    });\n}\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/navUtils.js?");
 
 /***/ })
 

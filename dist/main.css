@@ -1,6 +1,10 @@
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/Styles/style.scss ***!
   \****************************************************************************************************************/
+.span-icon {
+  font-size: 14px !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -49,10 +53,11 @@ body {
 #header-container .nav-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   flex: 1;
+  gap: 0.5rem;
 }
 #header-container .nav-container .nav-list {
   display: flex;
@@ -63,7 +68,7 @@ body {
   list-style: none;
 }
 #header-container .nav-container .nav-list .nav-item {
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: color 0.3s;
   padding: 0.5rem 1rem;
@@ -76,9 +81,9 @@ body {
 }
 #header-container .nav-container .nav-button {
   background-color: #dfb05b;
-  font-size: 16px;
+  font-size: 14px;
   color: #0d0a05;
-  padding: 0.7rem 1.4rem;
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
