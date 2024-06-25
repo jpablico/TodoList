@@ -28,7 +28,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
-        new IgnoreEmitPlugin(['style.js']), // Ignore the extra JavaScript file
-		new IgnoreEmitPlugin(['style.css']) // Ignore the extra CSS file
+        new IgnoreEmitPlugin(['style.js', 'style.css']), // Ignore the extra JavaScript and CSS files
     ],
 };

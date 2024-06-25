@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction createHeader() {\n  const header = document.createElement('header');\n  header.innerHTML = `\n\t<h1>My App</h1>\n\t<nav>\n\t  <a href=\"/\">Home</a>\n\t  <a href=\"/about\">About</a>\n\t</nav>\n  `;\n  return header;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHeader);\n\n//# sourceURL=webpack://todolist/./src/Scripts/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createHeader: () => (/* binding */ createHeader)\n/* harmony export */ });\n/* harmony import */ var _Styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Styles/style.scss */ \"./src/Styles/style.scss\");\n\n\nfunction createHeader() {\n  const header = document.createElement('header');\n  header.id = 'header-container';\n  header.innerHTML = `\n\t<div class='header-wrapper'>\n\t\t<h1 class='header-title'>Daybreak</h1>\n\t\t<button class='header-button'>Add task</button>\n\t</div>\n\t<nav class='nav-container'>\n\t\t<ul class='nav-list'>\n\t\t\t<li class='nav-item'>All</li>\n\t\t\t<li class='nav-item'>Completed</li>\n\t\t\t<li class='nav-item'>Temporary</li>\n\t\t</ul>\n\t\t<button class='nav-button'>Create a Label</button>\n\t</nav>\n  `;\n  return header;\n}\n\n \n\n//# sourceURL=webpack://todolist/./src/Scripts/header.js?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Styles/style.scss */ \"./src/Styles/style.scss\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header */ \"./src/Scripts/header.js\");\n\n\n\ndocument.body.appendChild((0,_header__WEBPACK_IMPORTED_MODULE_1__.createHeader)());\n\n//# sourceURL=webpack://todolist/./src/Scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Styles/style.scss */ \"./src/Styles/style.scss\");\n/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.js */ \"./src/Scripts/header.js\");\n\n\n\nconst body = document.body;\n\nbody.appendChild((0,_header_js__WEBPACK_IMPORTED_MODULE_1__.createHeader)());\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/index.js?");
 
 /***/ })
 

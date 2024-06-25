@@ -1,4 +1,6 @@
 import '../Styles/style.scss';
-import { createHeader } from './header';
+import { createHeader } from './header.js';
 
-document.body.appendChild(createHeader());
+const body = document.body;
+
+body.appendChild(createHeader());
