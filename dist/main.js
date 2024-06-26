@@ -20,13 +20,33 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/Scripts/data.js":
+/*!*****************************!*\
+  !*** ./src/Scripts/data.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   navItems: () => (/* binding */ navItems),\n/* harmony export */   navList: () => (/* binding */ navList)\n/* harmony export */ });\nconst navItems = [\n\t{ Label: 'All'},\n\t{ Label: 'Completed'},\n\t{ Label: 'Temporary'},\n\t{ Label: 'Permanent'}\n];\n\n\nconst navList = document.querySelector('.nav-list');\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/data.js?");
+
+/***/ }),
+
+/***/ "./src/Scripts/dialog.js":
+/*!*******************************!*\
+  !*** ./src/Scripts/dialog.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   openModal: () => (/* binding */ openModal)\n/* harmony export */ });\n/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils.js */ \"./src/Scripts/utils.js\");\n\n\nfunction openModal(contentType) {\n    // Assuming modal and navItem are accessible or passed as parameters\n\tconst dialog = document.querySelector('#dialog');\n\tif(contentType === 'addTask') {\n\t\tconsole.log('Add Task');\n\t\tconst dialog = document.createElement('dialog');\n\t\tdialog.id = 'dialog';\n\t\tdialog.innerHTML = `\n\t\t\t<form method=\"dialog\">\n\t\t\t\t<input type=\"text\" value=\"Hello\">\n\t\t\t\t<button value=\"cancel\">Cancel</button>\n\t\t\t\t<button value=\"default\">OK</button>\n\t\t\t</form>\n\t\t`;\n\t\tdocument.body.appendChild(dialog);\n\t\tdialog.showModal();\n\t} else if(contentType === 'add') {\n\t\tconsole.log('Add');\n\t\tconst dialog = document.createElement('dialog');\n\t\tdialog.id = 'dialog';\n\t\tdialog.innerHTML = `\n\t\t\t<form class='dialog-form'>\n\t\t\t\t<input type=\"text\"  class='input-element' value=\"Label name...\">\n\t\t\t\t<div class='button-container'>\n\t\t\t\t\t<button class='button-element' value=\"cancel\">Cancel</button>\n\t\t\t\t\t<button class='button-element' value=\"default\">OK</button>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t`;\n\t\tdocument.body.appendChild(dialog);\n\t\tdialog.showModal();\n\t} else {\n\t\tconsole.log('Default');\n\t}\n\tconsole.log('openModal');\n    (0,_utils_js__WEBPACK_IMPORTED_MODULE_0__.updateNavItemContent)(navItem, contentType); // navItem needs to be defined or passed\n    modal.style.display = 'block'; // Show the modal\n}\n\ndocument.addEventListener('DOMContentLoaded', () => {\n    const dialog = document.querySelector('dialog');\n    dialog.addEventListener('submit', event => {\n        event.preventDefault(); // Prevent the form from submitting in the traditional way\n        // Handle the form data here\n        console.log('Form submitted');\n        // You can manually close the dialog if needed\n        dialog.close();\n    });\n});\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/dialog.js?");
+
+/***/ }),
+
 /***/ "./src/Scripts/header.js":
 /*!*******************************!*\
   !*** ./src/Scripts/header.js ***!
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createHeader: () => (/* binding */ createHeader)\n/* harmony export */ });\n/* harmony import */ var _Styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Styles/style.scss */ \"./src/Styles/style.scss\");\n/* harmony import */ var _navData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navData.js */ \"./src/Scripts/navData.js\");\n/* harmony import */ var _navUtils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navUtils.js */ \"./src/Scripts/navUtils.js\");\n\n\n\n\nfunction createHeader() {\n    const header = document.createElement('header');\n    header.id = 'header-container';\n    header.innerHTML = `\n        <div class='header-wrapper'>\n            <h1 class='header-title'>Daybreak</h1>\n            <button class='header-button'>Add task</button>\n        </div>\n        <nav class='nav-container'>\n            <ul class='nav-list'></ul>\n            <button class='nav-button'><span class='material-symbols-outlined span-icon'>add</span></button>\n        </nav>\n    `;\n\n    const navList = header.querySelector('.nav-list');\n    (0,_navUtils_js__WEBPACK_IMPORTED_MODULE_2__.populateNavList)(navList, _navData_js__WEBPACK_IMPORTED_MODULE_1__.navItems);\n\n    return header;\n}\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createHeader: () => (/* binding */ createHeader)\n/* harmony export */ });\n/* harmony import */ var _Styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Styles/style.scss */ \"./src/Styles/style.scss\");\n/* harmony import */ var _data_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data.js */ \"./src/Scripts/data.js\");\n/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils.js */ \"./src/Scripts/utils.js\");\n/* harmony import */ var _dialog_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dialog.js */ \"./src/Scripts/dialog.js\");\n\n\n\n\n\nfunction createHeader() {\n    const header = document.createElement('header');\n    header.id = 'header-container';\n    header.innerHTML = `\n        <div class='header-wrapper'>\n            <h1 class='header-title'>Daybreak</h1>\n            <button class='header-button' id='addTaskButton' >Add task</button>\n        </div>\n        <nav class='nav-container'>\n            <ul class='nav-list'></ul>\n            <button class='nav-button' id='addButton' ><span class='material-symbols-outlined span-icon'>add</span></button>\n        </nav>\n    `;\n\n    const navList = header.querySelector('.nav-list');\n    (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.populateNavList)(navList, _data_js__WEBPACK_IMPORTED_MODULE_1__.navItems);\n\n    return header;\n}\n\ndocument.addEventListener('DOMContentLoaded', function() {\n    const addTaskButton = document.getElementById('addTaskButton');\n    const addButton = document.getElementById('addButton');\n\n    if (addTaskButton) {\n        addTaskButton.addEventListener('click', function() {\n            (0,_dialog_js__WEBPACK_IMPORTED_MODULE_3__.openModal)('addTask');\n        });\n    } else {\n        console.error('Add Task Button not found');\n    }\n\n    if (addButton) {\n        addButton.addEventListener('click', function() {\n            (0,_dialog_js__WEBPACK_IMPORTED_MODULE_3__.openModal)('add');\n        });\n    } else {\n        console.error('+ Button not found');\n    }\n});\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/header.js?");
 
 /***/ }),
 
@@ -36,27 +56,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Styles/style.scss */ \"./src/Styles/style.scss\");\n/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.js */ \"./src/Scripts/header.js\");\n\n\n\nconst body = document.body;\n\nbody.appendChild((0,_header_js__WEBPACK_IMPORTED_MODULE_1__.createHeader)());\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Styles/style.scss */ \"./src/Styles/style.scss\");\n/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.js */ \"./src/Scripts/header.js\");\n/* harmony import */ var _dialog_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dialog.js */ \"./src/Scripts/dialog.js\");\n/* harmony import */ var _data_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data.js */ \"./src/Scripts/data.js\");\n\n\n\n\n\n\nconst body = document.body;\n\nconst content = document.createElement('div');\ncontent.className = 'content';\n\nbody.appendChild((0,_header_js__WEBPACK_IMPORTED_MODULE_1__.createHeader)());\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/index.js?");
 
 /***/ }),
 
-/***/ "./src/Scripts/navData.js":
-/*!********************************!*\
-  !*** ./src/Scripts/navData.js ***!
-  \********************************/
+/***/ "./src/Scripts/utils.js":
+/*!******************************!*\
+  !*** ./src/Scripts/utils.js ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   navItems: () => (/* binding */ navItems),\n/* harmony export */   navList: () => (/* binding */ navList)\n/* harmony export */ });\nconst navItems = ['All', 'Completed', 'Temporary', 'Permanent'];\nconst navList = document.querySelector('.nav-list');\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/navData.js?");
-
-/***/ }),
-
-/***/ "./src/Scripts/navUtils.js":
-/*!*********************************!*\
-  !*** ./src/Scripts/navUtils.js ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   populateNavList: () => (/* binding */ populateNavList)\n/* harmony export */ });\nfunction populateNavList(navList, navItems) {\n    navList.innerHTML = ''; \n    navItems.forEach(item => {\n        const li = document.createElement('li');\n        li.className = 'nav-item';\n        li.textContent = item;\n        li.addEventListener('click', function(event) {\n            document.querySelectorAll('.nav-item').forEach(navItem => {\n                navItem.classList.remove('active');\n            });\n            event.target.classList.add('active');\n        });\n        navList.appendChild(li);\n    });\n}\n\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/navUtils.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   populateNavList: () => (/* binding */ populateNavList),\n/* harmony export */   updateNavItemContent: () => (/* binding */ updateNavItemContent)\n/* harmony export */ });\nfunction populateNavList(navList, navItems) {\n    navList.innerHTML = ''; \n    navItems.forEach(item => {\n        const li = document.createElement('li');\n        li.className = 'nav-item';\n        li.textContent = item.Label;\n        li.addEventListener('click', function(event) {\n            document.querySelectorAll('.nav-item').forEach(navItem => {\n                navItem.classList.remove('active');\n            });\n            event.target.classList.add('active');\n            updateNavItemContent(event.target);\n        });\n        navList.appendChild(li);\n    });\n}\n\nfunction updateNavItemContent(navItem, contentType) {\n    const content = document.querySelector('.content');\n    content.innerHTML = ''; // Clear existing content\n\n    // Determine content based on contentType\n    if (contentType === 'addTask') {\n        const input = document.createElement('input');\n        input.placeholder = 'Enter task name';\n        content.appendChild(input);\n        // Add more elements as needed for the Add Task dialog\n    } else if (contentType === 'add') {\n        const message = document.createElement('p');\n        message.textContent = 'Additional content for \"+\" button';\n        content.appendChild(message);\n        // Customize as needed for the \"+\" dialog\n    } else {\n        // Default content\n        const h2 = document.createElement('h2');\n        h2.textContent = navItem.textContent;\n        content.appendChild(h2);\n    }\n}\n\n\n\n\n//# sourceURL=webpack://todolist/./src/Scripts/utils.js?");
 
 /***/ })
 

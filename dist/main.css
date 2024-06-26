@@ -96,3 +96,46 @@ body {
 #header-container .nav-container .nav-button:hover {
   background-color: #d79b30;
 }
+
+#dialog {
+  margin: auto;
+  border: none;
+  padding: 2rem 1rem;
+  border-radius: 0.25rem;
+}
+#dialog .dialog-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+#dialog .dialog-form .input-element {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #dfb05b;
+  font-size: 14px;
+}
+#dialog .dialog-form .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+#dialog .dialog-form .button-container .button-element {
+  flex: 1;
+  background-color: #dfb05b;
+  color: #0d0a05;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#dialog .dialog-form .button-container .button-element:hover {
+  background-color: #d79b30;
+}
