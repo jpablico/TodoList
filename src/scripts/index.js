@@ -1,5 +1,5 @@
 import '../Styles/style.scss';
-import { createHeader } from './header.js';
+import { createHeader } from './headerComponent.js';
 import { navItems } from './data.js';
 import { initializeDialog, initializeButtons, openModal } from './logic.js';
 
