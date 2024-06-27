@@ -1,8 +1,12 @@
 import '../Styles/style.scss';
 import { createHeader } from './header.js';
-import { openModal } from './dialog.js';
 import { navItems } from './data.js';
+import { initializeDialog, initializeButtons, openModal } from './logic.js';
 
+document.addEventListener('DOMContentLoaded', () => {
+    initializeDialog();
+    initializeButtons();
+});
 
 const body = document.body;
 
