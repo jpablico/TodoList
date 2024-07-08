@@ -2,9 +2,9 @@ import '../Styles/style.scss';
 import { createHeader } from './headerComponent.js';
 import { navItems } from './data.js';
 import { initializeDialog, initializeButtons, openModal } from './logic.js';
+import { populateNavList } from './utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    initializeDialog();
     initializeButtons();
 });
 
