@@ -1,4 +1,7 @@
 July 8, 2024 - Need to rework dialog and finish the logic. 
 	Logic - Considering having a data value that corrisponds to the current label. Use that label to push in to the constructor class for each item creation. 
+	Considering a Nuke - Redo and use UML for logic pathing.
 
 	Style - Task priority should be radio input, use stack horizontally then for each container stack vertically. 
+
+
